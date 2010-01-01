@@ -1,6 +1,6 @@
 class Grid
 
-  attr_accessor :contents # 2D array of cells
+  attr_reader :contents # 2D array of cells
   attr_reader :rows
   attr_reader :columns
 
