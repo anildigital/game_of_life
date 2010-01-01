@@ -38,14 +38,7 @@ class Grid
   def grow 
 
     # Initialize Successor Grid Contents
-    successor_contents = Array.new rows
-    for row in 0...rows
-      successor_contents[row] = Array.new columns
-      for column in 0...columns
-        cell = Cell.new
-        successor_contents[row][column] = cell
-      end
-    end
+    successor_contents = Array.new(columns) {Array.new(rows) { Cell.new }}
 
     # Populate Successor Grid Contents which captures next state of cells
     i = 0
@@ -71,6 +64,11 @@ class Grid
 
   end
 
+  # Method to recieve callback as it's observing UniverseTime
+  def update(time_count)
+    grow
+  end
+
 
   # Private methods
 
@@ -93,7 +91,6 @@ class Grid
         end
       end
     end
-    @contents
   end
 
 
@@ -109,7 +106,7 @@ class Grid
     @rows = seed_data.size
 
     # Init grid contents for rows and columns
-    @contents = init_contents(@rows, @columns)
+    init_contents(@rows, @columns)
 
     i = 0
     for each_line in seed_data

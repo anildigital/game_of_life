@@ -13,6 +13,7 @@ class Universe
 
   def setup_life(seed_file)
     @grid = Grid.new(seed_file)
+    @universe_time.add_observer(@grid)
   end
 
 end
