@@ -20,9 +20,14 @@ class CellTest < Test::Unit::TestCase
     @cell.add_neighbour(new_cell)
     assert_equal 1, @cell.number_of_neighbours
     assert_equal 1, new_cell.number_of_neighbours
-    new_cell_2 = Cell.new
-    @cell.add_neighbour(new_cell_2)
+  end
+  
+  def test_add_neighbours
+    test_add_neighbour
+    new_cell = Cell.new
+    @cell.add_neighbour(new_cell)
     assert_equal 2, @cell.number_of_neighbours
+    assert_equal 1, new_cell.number_of_neighbours
   end
 
   def test_add_same_neighbour_multiple_times
@@ -37,18 +42,16 @@ class CellTest < Test::Unit::TestCase
   end
   
   def test_number_of_live_neighbours
-    cell1 = Cell.new
-    cell2 = Cell.new
-    cell1.add_neighbour(cell2)
-    assert_equal 1, cell1.number_of_alive_neighbours 
+    cells = cell_factory(3)
+    cells[1].is_alive = false
+    cells.each { |cell|  @cell.add_neighbour cell }
+    assert_equal 2, @cell.number_of_alive_neighbours 
   end
   
   def test_next_state_for_cell_for_overcrowdedness
     assert_equal 0, @cell.number_of_alive_neighbours
     cells = cell_factory(4)
-    for each_cell in cells
-      @cell.add_neighbour(each_cell)
-    end
+    cells.each {|cell| @cell.add_neighbour(cell) }
     assert_equal 4, @cell.number_of_alive_neighbours 
     assert_equal true, @cell.is_alive # current state    
     assert_equal false, @cell.next_state.is_alive # next state
@@ -57,9 +60,7 @@ class CellTest < Test::Unit::TestCase
   def test_next_state_for_cell_for_lonelyness
     assert_equal 0, @cell.number_of_alive_neighbours
     cells = cell_factory(1)
-    for each_cell in cells
-      @cell.add_neighbour(each_cell)
-    end
+    cells.each {|cell| @cell.add_neighbour(cell) }
     assert_equal 1, @cell.number_of_alive_neighbours 
     assert_equal true, @cell.is_alive # current state
     assert_equal false, @cell.next_state.is_alive # next state
@@ -68,9 +69,7 @@ class CellTest < Test::Unit::TestCase
   def test_next_state_for_cell_for_two_alive_neighbours
     assert_equal 0, @cell.number_of_alive_neighbours
     cells = cell_factory(2)
-    for each_cell in cells
-      @cell.add_neighbour(each_cell)
-    end
+    cells.each {|cell| @cell.add_neighbour(cell) }
     assert_equal 2, @cell.number_of_alive_neighbours 
     assert_equal true, @cell.is_alive # current state
     assert_equal true, @cell.next_state.is_alive # next state
@@ -79,9 +78,7 @@ class CellTest < Test::Unit::TestCase
   def test_next_state_for_cell_for_birth
     assert_equal 0, @cell.number_of_alive_neighbours
     cells = cell_factory(3)
-    for each_cell in cells
-      @cell.add_neighbour(each_cell)
-    end
+    cells.each {|cell| @cell.add_neighbour(cell) }
     @cell.is_alive = false
     assert_equal 3, @cell.number_of_alive_neighbours 
     assert_equal false, @cell.is_alive # current state
