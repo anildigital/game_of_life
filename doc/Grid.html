@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Grid</title>
+
+	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="./models/grid_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="models/grid.rb">models/grid.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#M000005">::new</a></li>
+					
+					<li><a href="#M000007">#<<</a></li>
+					
+					<li><a href="#M000008">#>></a></li>
+					
+					<li><a href="#M000006">#[]</a></li>
+					
+					<li><a href="#M000014">#determine_cell_state</a></li>
+					
+					<li><a href="#M000010">#grow</a></li>
+					
+					<li><a href="#M000011">#init_contents</a></li>
+					
+					<li><a href="#M000012">#setup_grid</a></li>
+					
+					<li><a href="#M000009">#to_s</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="./README_txt.html">README.txt</a></li>
+				
+					<li class="file"><a href="./resources/seed_blinker_txt.html">seed_blinker.txt</a></li>
+				
+					<li class="file"><a href="./resources/seed_bloat_txt.html">seed_bloat.txt</a></li>
+				
+					<li class="file"><a href="./resources/seed_block_txt.html">seed_block.txt</a></li>
+				
+					<li class="file"><a href="./resources/seed_toad_txt.html">seed_toad.txt</a></li>
+				
+					<li class="file"><a href="./test/fixtures/seed_blinker_txt.html">seed_blinker.txt</a></li>
+				
+					<li class="file"><a href="./test/fixtures/seed_bloat_txt.html">seed_bloat.txt</a></li>
+				
+					<li class="file"><a href="./test/fixtures/seed_block_txt.html">seed_block.txt</a></li>
+				
+					<li class="file"><a href="./test/fixtures/seed_toad_txt.html">seed_toad.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./Cell.html">Cell</a></li>
+				
+					<li><a href="./CellTest.html">CellTest</a></li>
+				
+					<li><a href="./GameOfLife_Tests.html">GameOfLife_Tests</a></li>
+				
+					<li><a href="./Grid.html">Grid</a></li>
+				
+					<li><a href="./GridTest.html">GridTest</a></li>
+				
+					<li><a href="./Life.html">Life</a></li>
+				
+					<li><a href="./Universe.html">Universe</a></li>
+				
+					<li><a href="./UniverseTest.html">UniverseTest</a></li>
+				
+					<li><a href="./UniverseTime.html">UniverseTime</a></li>
+				
+					<li><a href="./UniverseTimeTest.html">UniverseTimeTest</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Grid</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="contents-attribute-method" class="method-detail">
+				<a name="contents"></a>
+				
+				<a name="contents="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">contents</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p class="missing-docs">(Not documented)</p>
+				
+				</div>
+			</div>
+			
+			<div id="rows-attribute-method" class="method-detail">
+				<a name="rows"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">rows</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p class="missing-docs">(Not documented)</p>
+				
+				</div>
+			</div>
+			
+			<div id="columns-attribute-method" class="method-detail">
+				<a name="columns"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">columns</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p class="missing-docs">(Not documented)</p>
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="M000005"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(seed_file)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+<span class="ruby-comment cmt"># File models/grid.rb, line 7</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">seed_file</span>)
+    <span class="ruby-identifier">setup_grid</span>(<span class="ruby-identifier">seed_file</span>)
+  <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="M000007"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">&lt;&lt;</span><span
+						class="method-args">(cell)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+<span class="ruby-comment cmt"># File models/grid.rb, line 15</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-operator">&lt;&lt;</span>(<span class="ruby-identifier">cell</span>)
+    <span class="ruby-ivar">@contents</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">cell</span>
+  <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="M000008"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">&gt;&gt;</span><span
+						class="method-args">(cell)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+<span class="ruby-comment cmt"># File models/grid.rb, line 19</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-operator">&gt;&gt;</span>(<span class="ruby-identifier">cell</span>)
+    <span class="ruby-ivar">@contents</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">cell</span>)
+  <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="M000006"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">[]</span><span
+						class="method-args">(index)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+<span class="ruby-comment cmt"># File models/grid.rb, line 11</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-operator">[]</span>(<span class="ruby-identifier">index</span>)
+    <span class="ruby-ivar">@contents</span>[<span class="ruby-identifier">index</span>]
+  <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="grow-method" class="method-detail ">
+				<a name="M000010"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">grow</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="grow-source">
+<pre>
+<span class="ruby-comment cmt"># File models/grid.rb, line 38</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">grow</span> 
+
+    <span class="ruby-comment cmt"># Initialize Successor Grid Contents</span>
+    <span class="ruby-identifier">successor_contents</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">rows</span>
+    <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">row</span> <span class="ruby-keyword kw">in</span> <span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">rows</span>
+      <span class="ruby-identifier">successor_contents</span>[<span class="ruby-identifier">row</span>] = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">columns</span>
+      <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">column</span> <span class="ruby-keyword kw">in</span> <span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">columns</span>
+        <span class="ruby-identifier">cell</span> = <span class="ruby-constant">Cell</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-identifier">successor_contents</span>[<span class="ruby-identifier">row</span>][<span class="ruby-identifier">column</span>] = <span class="ruby-identifier">cell</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span>
+
+    <span class="ruby-comment cmt"># Populate Successor Grid Contents which captures next state of cells</span>
+    <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+    <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">each_row</span> <span class="ruby-keyword kw">in</span> <span class="ruby-ivar">@contents</span>
+      <span class="ruby-identifier">j</span> = <span class="ruby-value">0</span>
+      <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">each_cell</span> <span class="ruby-keyword kw">in</span> <span class="ruby-identifier">each_row</span>
+        <span class="ruby-identifier">successor_contents</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>].<span class="ruby-identifier">is_alive</span> = <span class="ruby-identifier">each_cell</span>.<span class="ruby-identifier">next_state</span>.<span class="ruby-identifier">is_alive</span>
+        <span class="ruby-identifier">j</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword kw">end</span>
+
+    <span class="ruby-comment cmt"># Change the current state of contents cell to the successor state</span>
+    <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+    <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">each_row</span> <span class="ruby-keyword kw">in</span> <span class="ruby-identifier">successor_contents</span>
+      <span class="ruby-identifier">j</span> = <span class="ruby-value">0</span>
+      <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">each_cell</span> <span class="ruby-keyword kw">in</span> <span class="ruby-identifier">each_row</span>
+        <span class="ruby-ivar">@contents</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>].<span class="ruby-identifier">is_alive</span> = <span class="ruby-identifier">each_cell</span>.<span class="ruby-identifier">is_alive</span>
+        <span class="ruby-identifier">j</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword kw">end</span>
+
+  <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="to-s-method" class="method-detail ">
+				<a name="M000009"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_s</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="to-s-source">
+<pre>
+<span class="ruby-comment cmt"># File models/grid.rb, line 23</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_s</span>
+    <span class="ruby-identifier">str</span> = <span class="ruby-value str">&quot;&quot;</span>
+    <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">each_cells_row</span> <span class="ruby-keyword kw">in</span> <span class="ruby-ivar">@contents</span>
+      <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">each_cell</span> <span class="ruby-keyword kw">in</span> <span class="ruby-identifier">each_cells_row</span>
+        <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">each_cell</span>.<span class="ruby-identifier">is_alive</span>
+          <span class="ruby-identifier">str</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;X&quot;</span>
+        <span class="ruby-keyword kw">else</span>
+          <span class="ruby-identifier">str</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;-&quot;</span>
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-identifier">str</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;\n&quot;</span>
+    <span class="ruby-keyword kw">end</span>
+    <span class="ruby-identifier">str</span>
+  <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="determine-cell-state-method" class="method-detail ">
+				<a name="M000014"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">determine_cell_state</span><span
+						class="method-args">(chr)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+helper to determine cell state
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="determine-cell-state-source">
+<pre>
+<span class="ruby-comment cmt"># File models/grid.rb, line 131</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">determine_cell_state</span>(<span class="ruby-identifier">chr</span>)
+    <span class="ruby-identifier">cell_states_hash</span> = {<span class="ruby-value str">&quot;X&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">true</span>, <span class="ruby-value str">&quot;-&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">false</span>}
+    <span class="ruby-identifier">cell_state</span> = <span class="ruby-identifier">cell_states_hash</span>[<span class="ruby-identifier">chr</span>]
+    <span class="ruby-identifier">cell_state</span>
+  <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="init-contents-method" class="method-detail ">
+				<a name="M000011"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">init_contents</span><span
+						class="method-args">(rows, columns)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Private methods
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="init-contents-source">
+<pre>
+<span class="ruby-comment cmt"># File models/grid.rb, line 79</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">init_contents</span>(<span class="ruby-identifier">rows</span>, <span class="ruby-identifier">columns</span>)
+    <span class="ruby-ivar">@contents</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">rows</span>
+    <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">row</span> <span class="ruby-keyword kw">in</span> <span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">rows</span>
+      <span class="ruby-ivar">@contents</span>[<span class="ruby-identifier">row</span>] = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">columns</span>
+      <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">column</span> <span class="ruby-keyword kw">in</span> <span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">columns</span>
+        <span class="ruby-identifier">cell</span> = <span class="ruby-constant">Cell</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-ivar">@contents</span>[<span class="ruby-identifier">row</span>][<span class="ruby-identifier">column</span>] = <span class="ruby-identifier">cell</span>
+        <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">row</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+          <span class="ruby-identifier">cell</span>.<span class="ruby-identifier">add_neighbour</span> <span class="ruby-ivar">@contents</span>[<span class="ruby-identifier">row</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>][<span class="ruby-identifier">column</span>]
+          <span class="ruby-identifier">cell</span>.<span class="ruby-identifier">add_neighbour</span> <span class="ruby-ivar">@contents</span>[<span class="ruby-identifier">row</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>][<span class="ruby-identifier">column</span><span class="ruby-operator">+</span><span class="ruby-value">1</span>] <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">column</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">columns</span> <span class="ruby-operator">-</span> <span class="ruby-value">2</span>
+        <span class="ruby-keyword kw">end</span>
+        <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">column</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+          <span class="ruby-identifier">cell</span>.<span class="ruby-identifier">add_neighbour</span> <span class="ruby-ivar">@contents</span>[<span class="ruby-identifier">row</span>][<span class="ruby-identifier">column</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>]
+          <span class="ruby-identifier">cell</span>.<span class="ruby-identifier">add_neighbour</span> <span class="ruby-ivar">@contents</span>[<span class="ruby-identifier">row</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>][<span class="ruby-identifier">column</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>] <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">row</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span>
+    <span class="ruby-ivar">@contents</span>
+  <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="setup-grid-method" class="method-detail ">
+				<a name="M000012"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">setup_grid</span><span
+						class="method-args">(seed_file)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Setup grid contents for the seed file passed. Set cell states accordingly.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="setup-grid-source">
+<pre>
+<span class="ruby-comment cmt"># File models/grid.rb, line 101</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">setup_grid</span>(<span class="ruby-identifier">seed_file</span>)
+
+    <span class="ruby-comment cmt"># Read the seed file</span>
+    <span class="ruby-identifier">file_object</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">seed_file</span>)
+    <span class="ruby-identifier">seed_data</span> = <span class="ruby-identifier">file_object</span>.<span class="ruby-identifier">readlines</span>
+    <span class="ruby-identifier">file_object</span>.<span class="ruby-identifier">close</span>
+
+    <span class="ruby-ivar">@columns</span> = <span class="ruby-identifier">seed_data</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">chomp</span>.<span class="ruby-identifier">length</span>
+    <span class="ruby-ivar">@rows</span> = <span class="ruby-identifier">seed_data</span>.<span class="ruby-identifier">size</span>
+
+    <span class="ruby-comment cmt"># Init grid contents for rows and columns</span>
+    <span class="ruby-ivar">@contents</span> = <span class="ruby-identifier">init_contents</span>(<span class="ruby-ivar">@rows</span>, <span class="ruby-ivar">@columns</span>)
+
+    <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+    <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">each_line</span> <span class="ruby-keyword kw">in</span> <span class="ruby-identifier">seed_data</span>
+      <span class="ruby-identifier">j</span> = <span class="ruby-value">0</span>
+      <span class="ruby-identifier">each_line</span>.<span class="ruby-identifier">chomp</span>.<span class="ruby-identifier">each_char</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">chr</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">cell_state</span> = <span class="ruby-identifier">determine_cell_state</span>(<span class="ruby-identifier">chr</span>) <span class="ruby-comment cmt"># dead or alive</span>
+        <span class="ruby-identifier">cell</span> = <span class="ruby-ivar">@contents</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>] <span class="ruby-comment cmt"># Take out the Cell to set it's state</span>
+        <span class="ruby-identifier">cell</span>.<span class="ruby-identifier">is_alive</span> = <span class="ruby-identifier">cell_state</span>
+        <span class="ruby-ivar">@contents</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>] = <span class="ruby-identifier">cell</span>
+        <span class="ruby-identifier">j</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword kw">end</span>
+
+  <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

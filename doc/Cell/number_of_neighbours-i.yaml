@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: returns total number of neighbours
+full_name: Cell#number_of_neighbours
+is_singleton: false
+name: number_of_neighbours
+params: ()
+visibility: public

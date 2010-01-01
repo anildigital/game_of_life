@@ -1,0 +1,19 @@
+--- !ruby/object:RDoc::RI::ClassDescription 
+attributes: 
+- !ruby/object:RDoc::RI::Attribute 
+  comment: 
+  name: is_alive
+  rw: RW
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: Life
+includes: []
+
+instance_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: next_state
+name: Life
+superclass: Object

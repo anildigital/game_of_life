@@ -1,0 +1,10 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Grid#grow
+is_singleton: false
+name: grow
+params: ()
+visibility: public

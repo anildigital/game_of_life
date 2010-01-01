@@ -1,0 +1,10 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: GridTest#test_cell_grid_blinker_pattern_after_one_tick
+is_singleton: false
+name: test_cell_grid_blinker_pattern_after_one_tick
+params: ()
+visibility: public

@@ -1,0 +1,10 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: CellTest#test_next_state_for_cell_for_lonelyness
+is_singleton: false
+name: test_next_state_for_cell_for_lonelyness
+params: ()
+visibility: public

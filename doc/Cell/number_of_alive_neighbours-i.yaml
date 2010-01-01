@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: returns the number of alive neighbors this cell has
+full_name: Cell#number_of_alive_neighbours
+is_singleton: false
+name: number_of_alive_neighbours
+params: ()
+visibility: public

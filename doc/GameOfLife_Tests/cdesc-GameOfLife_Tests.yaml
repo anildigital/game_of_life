@@ -1,0 +1,16 @@
+--- !ruby/object:RDoc::RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: suite
+comment: 
+constants: []
+
+full_name: GameOfLife_Tests
+includes: []
+
+instance_methods: []
+
+name: GameOfLife_Tests
+superclass: Object

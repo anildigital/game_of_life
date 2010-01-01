@@ -1,0 +1,10 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: GridTest#test_initialize_cell_grid_bloat_pattern
+is_singleton: false
+name: test_initialize_cell_grid_bloat_pattern
+params: ()
+visibility: public

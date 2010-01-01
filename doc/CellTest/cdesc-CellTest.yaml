@@ -1,0 +1,38 @@
+--- !ruby/object:RDoc::RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: CellTest
+includes: []
+
+instance_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: cell_factory
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: setup
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: teardown
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: test_add_neighbour
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: test_add_same_neighbour_multiple_times
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: test_cell_initialize
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: test_initial_neighbours_blank
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: test_next_state_for_cell_for_birth
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: test_next_state_for_cell_for_lonelyness
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: test_next_state_for_cell_for_overcrowdedness
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: test_next_state_for_cell_for_two_alive_neighbours
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: test_number_of_live_neighbours
+name: CellTest
+superclass: Test::Unit::TestCase

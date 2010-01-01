@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: next_state
+full_name: Cell#next_state
+is_singleton: false
+name: next_state
+params: ()
+visibility: public

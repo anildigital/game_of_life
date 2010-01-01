@@ -1,0 +1,10 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: CellTest#teardown
+is_singleton: false
+name: teardown
+params: ()
+visibility: public

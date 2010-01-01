@@ -1,0 +1,10 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: CellTest#test_add_same_neighbour_multiple_times
+is_singleton: false
+name: test_add_same_neighbour_multiple_times
+params: ()
+visibility: public
