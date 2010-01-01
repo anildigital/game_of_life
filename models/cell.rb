@@ -9,7 +9,7 @@ class Cell < Life
     @neighbours = []
   end
 
-  # Public methods
+
   public
 
   # returns total number of neighbours

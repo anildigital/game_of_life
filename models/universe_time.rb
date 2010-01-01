@@ -14,7 +14,7 @@ class UniverseTime # Time class is reserved so using UniverseTime
   def tick
     @time_count += 1
     changed
-    notify_observers(self)
+    notify_observers
   end
   
 end

@@ -2,6 +2,14 @@ require 'test_helper'
 
 class CellTest < Test::Unit::TestCase
 
+  def setup
+    @cell = Cell.new
+  end
+  
+  def teardown
+    @cell = nil
+  end
+  
   def test_cell_initialize
     assert_equal true, @cell.is_alive
   end
@@ -80,14 +88,8 @@ class CellTest < Test::Unit::TestCase
     assert_equal true, @cell.next_state.is_alive # next state
   end
   
-  # Helper methods used in tests
-  def setup
-    @cell = Cell.new
-  end
   
-  def teardown
-    @cell = nil
-  end
+  # Helper methods used in tests
   
   def cell_factory(number)
     cells = []

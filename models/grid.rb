@@ -38,7 +38,7 @@ class Grid
   def grow 
 
     # Initialize Successor Grid Contents
-    successor_contents = Array.new(columns) {Array.new(rows) { Cell.new }}
+    successor_contents = Array.new(@columns) {Array.new(@rows) { Cell.new }}
 
     # Populate Successor Grid Contents which captures next state of cells
     i = 0
@@ -65,10 +65,9 @@ class Grid
   end
 
   # Method to recieve callback as it's observing UniverseTime
-  def update(time_count)
+  def update()
     grow
   end
-
 
   # Private methods
 
