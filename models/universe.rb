@@ -3,8 +3,7 @@ require File.dirname(__FILE__) + '/universe_time'
 
 class Universe  # The Universe which has a grid and an universe time
 
-  attr_reader :grid
-  attr_reader :universe_time
+  attr_reader :grid, :universe_time
   
   def initialize
     @grid = nil

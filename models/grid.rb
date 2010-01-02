@@ -17,9 +17,9 @@ class Grid
     for each_cells_row in @contents
       for each_cell in each_cells_row
         if each_cell.is_alive
-          str << "X"
+          str << Life::ALIVE
         else
-          str << "-"
+          str << Life::DEAD
         end
       end
       str << "\n"
@@ -37,7 +37,7 @@ class Grid
     for each_row in @contents
       j = 0
       for each_cell in each_row
-        successor_contents[i][j].is_alive = each_cell.next_state.is_alive
+        successor_contents[i][j].state = each_cell.next_state.state
         j += 1
       end
       i += 1
@@ -48,7 +48,7 @@ class Grid
     for each_row in successor_contents
       j = 0
       for each_cell in each_row
-        @contents[i][j].is_alive = each_cell.is_alive
+        @contents[i][j].state = each_cell.state
         j += 1
       end
       i += 1
@@ -103,9 +103,8 @@ class Grid
     for each_line in seed_data
       j = 0
       each_line.chomp.each_char do |chr|
-        cell_state = determine_cell_state(chr) # dead or alive
         cell = @contents[i][j] # Take out the Cell to set it's state
-        cell.is_alive = cell_state
+        cell.state = chr
         @contents[i][j] = cell
         j += 1
       end
@@ -114,12 +113,5 @@ class Grid
 
   end
 
-
-  # helper to determine cell state
-  def determine_cell_state(chr)
-    cell_states_hash = {"X" => true, "-" => false}
-    cell_state = cell_states_hash[chr]
-    cell_state
-  end
 
 end

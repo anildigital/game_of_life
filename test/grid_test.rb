@@ -16,12 +16,8 @@ class GridTest < Test::Unit::TestCase
 
   def test_initialize_cell_grid_block_pattern
     grid = Grid.new(@seed_file_block)
-    assert_equal true, grid[1][1].is_alive
-    assert_equal true, grid[1][0].is_alive 
-
-    assert_raise NoMethodError do 
-      grid[0][3].is_alive
-    end  
+    output_str = "XX\nXX\n"
+    assert_equal output_str, grid.to_s
   end
 
   def test_initialize_cell_grid_blinker_pattern
