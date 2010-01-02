@@ -12,14 +12,6 @@ class Grid
     @contents[index]
   end
 
-  def <<(cell)
-    @contents << cell
-  end
-
-  def >>(cell)
-    @contents.delete(cell)
-  end
-
   def to_s
     str = ""
     for each_cells_row in @contents
