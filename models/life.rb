@@ -5,7 +5,6 @@ class Life # Represents things which has birth and death
   
   attr_accessor :state  # Represents alive or dead
   
-  
   def is_alive
     @state == ALIVE
   end

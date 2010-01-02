@@ -20,26 +20,26 @@ class CellTest < Test::Unit::TestCase
   end
 
   def test_add_neighbour
-    assert_equal 0, @cell.number_of_neighbours
     new_cell = Cell.new
+    new_cell.is_alive = true
     @cell.add_neighbour(new_cell)
-    assert_equal 1, @cell.number_of_neighbours
-    assert_equal 1, new_cell.number_of_neighbours
+    assert_equal 1, @cell.number_of_alive_neighbours
   end
   
   def test_add_neighbours
     test_add_neighbour
     new_cell = Cell.new
+    new_cell.is_alive = true
     @cell.add_neighbour(new_cell)
-    assert_equal 2, @cell.number_of_neighbours
-    assert_equal 1, new_cell.number_of_neighbours
+    assert_equal 2, @cell.number_of_alive_neighbours
   end
 
   def test_add_same_neighbour_multiple_times
     new_cell = Cell.new
+    new_cell.is_alive = true
     @cell.add_neighbour(new_cell)
     @cell.add_neighbour(new_cell)
-    assert_equal 1, @cell.number_of_neighbours
+    assert_equal 1, @cell.number_of_alive_neighbours
   end
   
   def test_number_of_live_neighbours

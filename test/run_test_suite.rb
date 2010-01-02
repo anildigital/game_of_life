@@ -4,7 +4,7 @@ require 'test/unit/ui/console/testrunner'
 
 # require all "_test.rb" files
 Dir[File.dirname(__FILE__) + "/*_test.rb"].each do |file|
-    require file
+  require file
 end
 
 class GameOfLife_Tests

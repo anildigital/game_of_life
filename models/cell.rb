@@ -9,11 +9,6 @@ class Cell < Life
     @neighbours = []
   end
 
-  # returns total number of neighbours
-  def number_of_neighbours
-    @neighbours.size
-  end
-
   # returns the number of alive neighbors this cell has
   def number_of_alive_neighbours
     alive_neighbours = @neighbours.find_all {|cell| cell.is_alive}
