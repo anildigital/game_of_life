@@ -2,7 +2,7 @@ require File.dirname(__FILE__) + '/life'
 
 class Cell < Life
 
-  attr_reader :neighboursr
+  attr_reader :neighbours
 
   def initialize
     @is_alive = false
@@ -34,6 +34,7 @@ class Cell < Life
 
     # give birth to new cell when there are exactly 3 alive neighbours and current state is dead
     cloned_cell.is_alive = true if !(is_alive) && number_of_alive_neighbours == 3
+
 
     cloned_cell
   end
