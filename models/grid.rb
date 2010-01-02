@@ -16,11 +16,7 @@ class Grid
     str = ""
     for each_cells_row in @contents
       for each_cell in each_cells_row
-        if each_cell.is_alive
-          str << Life::ALIVE
-        else
-          str << Life::DEAD
-        end
+        str << each_cell.state
       end
       str << "\n"
     end

@@ -32,7 +32,6 @@ class UniverseTimeTest < Test::Unit::TestCase
         @count
       end
     end
-    obj.count
 
     obj.instance_eval do
       def update
