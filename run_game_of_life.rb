@@ -2,6 +2,8 @@ Dir[File.dirname(__FILE__) + "/models/*.rb"].each do |file|
     require file
 end
 
+endline = lambda { puts("______________________________\n\n\n")}
+
 universe = Universe.new
 
 puts "Block Pattern"
@@ -12,7 +14,7 @@ puts "\n"
 universe.universe_time.tick
 puts universe.grid.to_s
 
-puts "\n\n"
+endline.call
 
 puts "Blinker Pattern"
 seed_file = File.dirname(__FILE__) + "/resources/seed_blinker.txt"
@@ -22,7 +24,7 @@ puts "\n"
 universe.universe_time.tick
 puts universe.grid.to_s
 
-puts "\n\n"
+endline.call
 
 
 puts "Bloat Pattern"
@@ -33,7 +35,7 @@ puts "\n"
 universe.universe_time.tick
 puts universe.grid.to_s
 
-puts "\n\n"
+endline.call
 
 
 puts "Toad Pattern"
@@ -44,4 +46,4 @@ puts "\n"
 universe.universe_time.tick
 puts universe.grid.to_s
 
-puts "\n\n"
+endline.call

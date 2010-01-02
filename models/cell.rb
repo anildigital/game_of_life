@@ -5,7 +5,7 @@ class Cell < Life
   attr_reader :neighbours
 
   def initialize
-    @is_alive = true
+    @is_alive = false
     @neighbours = []
   end
 
