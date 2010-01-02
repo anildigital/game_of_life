@@ -1,20 +1,19 @@
 require 'observer'
-class UniverseTime # Time class is reserved so using UniverseTime
+class UniverseTime # Represents UniverseTime  (Purposely haven't used original Time class)
   
-  attr_accessor :time_count
-  attr_reader :universe
+  attr_reader :time_count # Time counter which changes upon discrete time tick
   
   include Observable
   
-  def initialize(universe)
-    @time_count = 1
-    @universe = universe
+  def initialize
+    @time_count = 0
   end
   
   def tick
     @time_count += 1
     changed
     notify_observers
+    self
   end
   
 end
