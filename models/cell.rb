@@ -9,9 +9,6 @@ class Cell < Life
     @neighbours = []
   end
 
-
-  public
-
   # returns total number of neighbours
   def number_of_neighbours
     @neighbours.size

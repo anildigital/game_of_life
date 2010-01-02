@@ -60,8 +60,8 @@ class Grid
   def update()
     grow
   end
-
-  # Private methods
+  
+  
 
   private
 
@@ -84,7 +84,6 @@ class Grid
     end
   end
 
-
   # Setup grid contents for the seed file passed. Set cell states accordingly.
   def setup_grid(seed_file)
 
@@ -99,6 +98,7 @@ class Grid
     # Init grid contents for rows and columns
     init_contents(@rows, @columns)
 
+    # Loop through seed data and setup grid contents
     i = 0
     for each_line in seed_data
       j = 0
