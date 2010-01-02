@@ -8,7 +8,7 @@ class Universe  # The Universe which has a grid and an universe time
   
   def initialize
     @grid = nil
-    @universe_time = UniverseTime.new
+    @universe_time = UniverseTime.instance
   end
 
   def setup_life(seed_file)
