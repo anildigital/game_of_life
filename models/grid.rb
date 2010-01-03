@@ -22,7 +22,7 @@ class Grid
   end
 
   def grow 
-
+    
     # Initialize Successor Grid Contents
     successor_contents = Array.new(@columns) {Array.new(@rows) { Cell.new }}
 
