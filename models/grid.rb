@@ -26,26 +26,20 @@ class Grid
     # Initialize Successor Grid Contents
     successor_contents = Array.new(@columns) {Array.new(@rows) { Cell.new }}
 
-    # Populate Successor Grid Contents which captures next state of cells
-    i = 0
-    for each_row in @contents
-      j = 0
-      for each_cell in each_row
-        successor_contents[i][j].state = each_cell.next_state
-        j += 1
+    # Populate Successor Grid Contents which captures next state of cells    
+    for row in 0...@rows
+      for column in 0...@columns
+        cell = @contents[row][column]
+        successor_contents[row][column].state = cell.next_state
       end
-      i += 1
     end
 
     # Change the current state of contents cell to the successor state
-    i = 0
-    for each_row in successor_contents
-      j = 0
-      for each_cell in each_row
-        @contents[i][j].state = each_cell.state
-        j += 1
+    for row in 0...@rows
+      for column in 0...@columns
+        cell = successor_contents[row][column]
+        @contents[row][column].state = cell.state
       end
-      i += 1
     end
 
   end
@@ -54,7 +48,6 @@ class Grid
   def update()
     grow
   end
-  
   
 
   private
@@ -93,16 +86,16 @@ class Grid
     init_contents(@rows, @columns)
 
     # Loop through seed data and setup grid contents
-    i = 0
+    row = 0
     for each_line in seed_data
-      j = 0
+      column = 0
       each_line.chomp.each_char do |chr|
-        cell = @contents[i][j] # Take out the Cell to set it's state
+        cell = @contents[row][column] # Take out the Cell to set it's state
         cell.state = chr
-        @contents[i][j] = cell
-        j += 1
+        @contents[row][column] = cell
+        column += 1
       end
-      i += 1
+      row += 1
     end
 
   end
