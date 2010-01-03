@@ -1,4 +1,4 @@
-class Life # Represents things which has birth and death
+class Life # Represents things which has has state, alive or dead
   
   ALIVE = "X"
   DEAD = "-"
