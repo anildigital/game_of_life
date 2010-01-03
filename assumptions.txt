@@ -1,0 +1,5 @@
+1. It assumes input seed data is valid. So exception handling is purposely not done. This program gets initialized with seed files and as there is no user input, exception handling is not used in the code.
+
+2. It assumes grid size i.e. rows and columns are determined by the seed file data. No fixed consideration of size of grid rows and columns. It is dependent on seed data.
+
+3. In one of the inputs, input data is adjusted with needed dead cells for generating necessary output.

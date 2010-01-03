@@ -8,11 +8,11 @@ This software is a simulation of "Game of Life".
 
 It models five classes 
 
-1. Universe - Everything including life is a part of universe
-2. Life - The things which has property of birth and death are part of life
-3. UniverseTime - UniverseTime which represents time, it changes upon tick( discrete moment, like seconds we have in our Time)
-4. Cell - Cell is a life, it gets birth and it has death. It also knows about it's neighbor cells. birth and death is depends of number of neighbours it has. It has two states live or dead.
-5. Grid - Orthogonal grid of square cells.
+1. Life - Abstract class for the things that has property of live and death.
+2. Cell - Concrete class Cell which inherits from life. Tt has state live or death . It also knows about it's neighbor cells. Birth and death is depends of number of neighbours the cell has. 
+3. Grid - Grid class which represents orthogonal grid of square cells.
+4. Universe - This class models Universe which has grid and universe_time. Initializing Universe initializes grid which has life in the form of cells. Universe has instance of universe_time.
+5. UniverseTime - UniverseTime which is responsible for tick. A tick is a discrete moment of time like 'second'.
 
 
 How to run
