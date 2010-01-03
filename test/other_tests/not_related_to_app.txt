@@ -1,0 +1,1 @@
+Code inside folder "other_tests" is not part of the software. These are codes written while testing out behavior required for developing the software.
