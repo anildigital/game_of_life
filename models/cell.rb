@@ -27,7 +27,7 @@ class Cell < Life
   # next_state 
   def next_state
     
-    # Initialize as cells previous state
+    # Initialize it with cell's previous state
     nxt_state = state
 
     # kill the cell due to lonelyness or overcrowdedness
