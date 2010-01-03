@@ -29,7 +29,7 @@ class Cell < Life
 
     cloned_cell = self.clone # Use cloned cell as it would be next state of cell
 
-    # kill the cell due to lonelyness or overcrowdness
+    # kill the cell due to lonelyness or overcrowdedness
     cloned_cell.is_alive = false if is_alive && ( number_of_alive_neighbours < 2 or number_of_alive_neighbours > 3)
 
     # give birth to new cell when there are exactly 3 alive neighbours and current state is dead

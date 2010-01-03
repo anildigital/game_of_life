@@ -1,7 +1,6 @@
 Game of Life
 ============
 
-
 Info
 ----
 
@@ -48,4 +47,9 @@ test      => Contains tests
 resources => Input seed file. For using those info see how to run section
 tests/fixtures => Fixtures used in tests
 
+
+Brief Introduction of Design
+-----------------------------
+
+See "Brief Introduction of Design.doc" in root folder
 
