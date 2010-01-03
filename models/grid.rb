@@ -22,9 +22,8 @@ class Grid
   end
 
   def grow 
-    
     # Initialize Successor Grid Contents
-    successor_contents = Array.new(@columns) {Array.new(@rows) { Cell.new }}
+    successor_contents = Array.new(@columns) { Array.new(@rows) { Cell.new } }
 
     # Populate Successor Grid Contents which captures next state of cells    
     for row in 0...@rows
@@ -41,14 +40,11 @@ class Grid
         @contents[row][column].state = cell.state
       end
     end
-
   end
 
-  # Method to recieve callback as it's observing UniverseTime
-  def update()
-    grow
-  end
-  
+
+  alias_method :update, :grow # aliasing as observer needs to respond to 'update' method
+
 
   private
 
@@ -69,11 +65,11 @@ class Grid
         end
       end
     end
+
   end
 
   # Setup grid contents for the seed file passed. Set cell states accordingly.
   def setup_grid(seed_file)
-
     # Read the seed file
     file_object = File.open(seed_file)
     seed_data = file_object.readlines
@@ -97,7 +93,6 @@ class Grid
       end
       row += 1
     end
-
   end
 
 

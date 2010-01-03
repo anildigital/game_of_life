@@ -33,7 +33,6 @@ class GridTest < Test::Unit::TestCase
   end
 
   def test_initialize_cell_grid_toad_pattern
-
     grid = Grid.new(@seed_file_toad)
     output_str = "----\n-XXX\nXXX-\n----\n"
     assert_equal output_str, grid.to_s

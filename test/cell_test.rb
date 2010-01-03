@@ -52,7 +52,7 @@ class CellTest < Test::Unit::TestCase
   def test_next_state_for_cell_for_overcrowdedness
     assert_equal 0, @cell.number_of_alive_neighbours
     cells = cell_factory(4, true)
-    cells.each {|cell| @cell.add_neighbour(cell) }
+    cells.each { |cell| @cell.add_neighbour(cell) }
     assert_equal 4, @cell.number_of_alive_neighbours 
     assert_equal Cell::ALIVE, @cell.state # current state    
     assert_equal Cell::DEAD, @cell.next_state # next state
@@ -61,7 +61,7 @@ class CellTest < Test::Unit::TestCase
   def test_next_state_for_cell_for_lonelyness
     assert_equal 0, @cell.number_of_alive_neighbours
     cells = cell_factory(1, true)
-    cells.each {|cell| @cell.add_neighbour(cell) }
+    cells.each { |cell| @cell.add_neighbour(cell) }
     assert_equal 1, @cell.number_of_alive_neighbours 
     assert_equal Cell::ALIVE, @cell.state # current state
     assert_equal Cell::DEAD, @cell.next_state # next state
@@ -70,7 +70,7 @@ class CellTest < Test::Unit::TestCase
   def test_next_state_for_cell_for_two_alive_neighbours
     assert_equal 0, @cell.number_of_alive_neighbours
     cells = cell_factory(2, true)
-    cells.each {|cell| @cell.add_neighbour(cell) }
+    cells.each { |cell| @cell.add_neighbour(cell) }
     assert_equal 2, @cell.number_of_alive_neighbours 
     assert_equal Cell::ALIVE, @cell.state # current state
     assert_equal Cell::ALIVE, @cell.next_state # next state
@@ -80,7 +80,7 @@ class CellTest < Test::Unit::TestCase
     @cell.is_alive = false # Set current cell state as dead
     assert_equal 0, @cell.number_of_alive_neighbours
     cells = cell_factory(3, true)
-    cells.each {|cell| @cell.add_neighbour(cell) }
+    cells.each { |cell| @cell.add_neighbour(cell) }
     assert_equal 3, @cell.number_of_alive_neighbours 
     assert_equal Cell::DEAD, @cell.state # current state
     assert_equal Cell::ALIVE, @cell.next_state # next state
