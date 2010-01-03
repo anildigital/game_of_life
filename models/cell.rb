@@ -9,7 +9,6 @@ class Cell < Life
     @neighbours = []
   end
 
-
   # returns the number of alive neighbors this cell has
   def number_of_alive_neighbours
     alive_neighbours = @neighbours.find_all {|cell| cell.is_alive}
@@ -23,20 +22,21 @@ class Cell < Life
       cell.neighbours << self
     end
   end
+  
 
   # next_state 
   def next_state
-
-    cloned_cell = self.clone # Use cloned cell as it would be next state of cell
+    
+    # Initialize as cells previous state
+    nxt_state = state
 
     # kill the cell due to lonelyness or overcrowdedness
-    cloned_cell.is_alive = false if is_alive && ( number_of_alive_neighbours < 2 or number_of_alive_neighbours > 3)
+    nxt_state = DEAD if is_alive && ( number_of_alive_neighbours < 2 or number_of_alive_neighbours > 3)
 
     # give birth to new cell when there are exactly 3 alive neighbours and current state is dead
-    cloned_cell.is_alive = true if !(is_alive) && number_of_alive_neighbours == 3
-
-
-    cloned_cell
+    nxt_state = ALIVE if !(is_alive) && number_of_alive_neighbours == 3
+    
+    nxt_state
   end
 
 end

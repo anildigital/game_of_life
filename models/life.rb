@@ -9,7 +9,6 @@ class Life # Represents things which has has state, alive or dead
     @state == ALIVE
   end
   
-  
   def is_alive=(is_alive)
     @state = (is_alive ? ALIVE : DEAD)
   end

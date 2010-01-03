@@ -1,8 +1,6 @@
 class Grid
 
   attr_reader :contents # 2D array of cells
-  attr_reader :rows
-  attr_reader :columns
 
   def initialize(seed_file)
     setup_grid(seed_file)
@@ -33,7 +31,7 @@ class Grid
     for each_row in @contents
       j = 0
       for each_cell in each_row
-        successor_contents[i][j].state = each_cell.next_state.state
+        successor_contents[i][j].state = each_cell.next_state
         j += 1
       end
       i += 1
