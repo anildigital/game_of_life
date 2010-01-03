@@ -6,11 +6,9 @@ class Grid
   attr_reader :columns
 
   def initialize(rows, columns)
-    
     @contents = Array.new(columns) {Array.new(rows)}
     @rows = @contents.size
     @columns = @contents[0].size
-    
     
     for row in 0...@rows
       for column in 0...@columns
