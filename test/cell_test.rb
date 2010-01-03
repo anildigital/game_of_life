@@ -42,7 +42,7 @@ class CellTest < Test::Unit::TestCase
     assert_equal 1, @cell.number_of_alive_neighbours
   end
   
-  def test_number_of_live_neighbours
+  def test_number_of_alive_neighbours
     cells = cell_factory(3, true)
     cells[1].is_alive = false
     cells.each { |cell|  @cell.add_neighbour cell }
